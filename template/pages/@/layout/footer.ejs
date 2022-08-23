@@ -3,6 +3,7 @@
 const footer = _.cms('footer') || {}
 const contacts = _.cms('contacts') || {}
 const themeCustom = _.settings.theme.custom || ''
+const { path } = _.route
 %>
 
 <footer class="footer py-3 py-lg-4 py-xl-5">
@@ -157,13 +158,15 @@ const themeCustom = _.settings.theme.custom || ''
       <% } %>
 
       <div class="col-12 col-xl order-<%= themeCustom === 'ecom-beauty' ? '' : 'lg-'%>first">
-        <h2 class="footer__title footer__store">
-          <%= footer.description.title || _.settings.name %>
-        </h2>
-        <p><%- footer.description.text || _.settings.description %></p>
+        <% if (path === '/' || path === '/index') { %> 
+          <h1  class="footer__title footer__store" itemprop="name"><%= footer.description.title || _.settings.name %></h1>
+        <% } else { %>
+          <h2  class="footer__title footer__store"><%= footer.description.title || _.settings.name %></h2>
+        <% } %>
+        <h4><%- footer.description.text || _.settings.description %></h4>
 
         <div class="mt-4 mb-3">
-          <p class="footer__payment-methods">
+          <!-- <p class="footer__payment-methods">
             <% Object.keys(footer.payment_methods).forEach(method => { %>
               <% if (footer.payment_methods[method]) { %>
                 <i class="pay-icon pay-icon--<%= method %>"></i>
@@ -172,39 +175,70 @@ const themeCustom = _.settings.theme.custom || ''
           </p>
           <div class="footer__stamps">
             <%- await include(`@/sections/stamps`, { _, opt: { stamps: footer.stamps } }) %>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
 
-    <div class="footer__credits">
-      <span>
-        <%= footer.credits || `© ${_.store.name} / ${contacts.address} / ${contacts.doc_number}` %>
-      </span>
-      <% if (themeCustom === 'ecom-beauty') { %>
-        <div class="ecom-credits-container">
-          <div class="ecom-credits">
-            <a href="https://e-com.plus" target="_blank" rel="noopener">
-              <img
-                src="https://ecom.nyc3.cdn.digitaloceanspaces.com/storefront/ecom-credits-white.png"
-                alt="E-Com Plus"
-                width="125.42"
-                height="20"
-              >
-            </a>
-          </div>
-        </div>
-      <% } %>
-      <button
-        id="go-to-top"
-        class="btn btn-primary ml-3"
-        type="button"
-        aria-label="<%= _.dictionary('goToTop') %>"
-      >
-        <i class="i-chevron-up"></i>
-      </button>
-    </div>
   </div>  
 </footer>
+<div class="row">
+  <div class="container" style="display: flex; margin-top: 1rem">
+    <div class="col-12 col-sm-7 text-right" id="selos_seguranca">
+      <big>Selos e certificados</big>
+      <div class="container-fluid">
+        <div class="footer__stamps">
+          <%- await include(`@/sections/stamps`, { _, opt: { stamps: footer.stamps } }) %>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-5" id="selos_pagamentos" style="text-align: right">
+      <big>Formas de pagamento</big>
+      <div class="mt-4 mb-3">
+        <p class="footer__payment-methods">
+          <% Object.keys(footer.payment_methods).forEach(method => { %>
+            <% if (footer.payment_methods[method]) { %>
+              <i class="pay-icon pay-icon--<%= method %>"></i>
+            <% } %>
+          <% }) %>
+        </p>
+      </div>
+      <ul class="list-unstyled" style="display: flex; float: right">
+        <!-- <li style="padding: 5px"><img src="/img/uploads/mercadopago-logo.png"></li>
+        <li style="padding: 5px"><img src="/img/uploads/decred-logo.png"></li>
+        <li style="padding: 5px"><img src="/img/uploads/bit-coin-logo.png"></li> -->
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="footer__credits">
+  <div class="container" style="display: flex;justify-content: space-between;">
+    <span>
+      <%= footer.credits || `© ${_.store.name} / ${contacts.address} / ${contacts.doc_number}` %>
+    </span>
+    <% if (themeCustom === 'ecom-beauty') { %>
+      <div class="ecom-credits-container">
+        <div class="ecom-credits">
+          <a href="https://e-com.plus" target="_blank" rel="noopener">
+            <img
+              src="https://ecom.nyc3.cdn.digitaloceanspaces.com/storefront/ecom-credits-white.png"
+              alt="E-Com Plus"
+              width="125.42"
+              height="20"
+            >
+          </a>
+        </div>
+      </div>
+    <% } %>
+    <button
+      id="go-to-top"
+      class="btn btn-primary ml-3"
+      type="button"
+      aria-label="<%= _.dictionary('goToTop') %>"
+    >
+      <i class="i-chevron-up"></i>
+    </button>
+  </div>
+</div>
 
 <%- await include('@/layout/inc/ecom-credits') %>

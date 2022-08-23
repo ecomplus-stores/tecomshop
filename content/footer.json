@@ -1,7 +1,7 @@
 {
   "description": {
-    "title": "",
-    "text": ""
+    "text": "Fundada em 2018, a TecomShop é uma loja especializada no comércio de eletrônicos importados. Todos os nossos produtos são originais e lacrados. Para nós, o bom relacionamento com o cliente é o bem mais valioso, devido a isso, oferecemos um atendimento exclusivo, rápido e eficaz.",
+    "title": "TecomShop"
   },
   "links_1": {
     "list_pages": true,
@@ -42,5 +42,5 @@
     "mais": false,
     "itau": true
   },
-  "credits": ""
+  "credits": "TecomShop - CPF: 224.258.040-05 © 2022 Todos os direitos reservados"
 }
