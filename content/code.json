@@ -1,5 +1,5 @@
 {
   "css": ".top-bar {\n    background: #348ef5;\n}\n.header {\n    background: #348ef5;\n}\n.header__category {\n    color: #ffffff;\n}\n.header__logo {\n    max-height: 100px;\n}\n.top-bar__nav {\n    color: #ffffff;\n}\n.header__buttons .btn {\n    color: #ffffff;\n}\n.header__buttons .btn:hover {\n    color: #405063;\n}",
-  "html_head": "",
+  "html_head": "<meta name=\"google-site-verification\" content=\"9Sb2CCNH1rMSQk4HoxNew8QJ2uRKC8jS2h5-yo_qE70\" />",
   "html_body": ""
 }

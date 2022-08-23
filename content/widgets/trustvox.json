@@ -5,7 +5,7 @@
   "enableCheckout": false,
   "disablePages": true,
   "options": {
-    "trustvoxStoreId": ""
+    "trustvoxStoreId": "111456"
   },
   "bodyAppend": "src/append/body",
   "productDescriptionAppend": "src/append/product-block",
