@@ -9,3 +9,8 @@
         color: #3d3d3d;
       }
   }
+  #product {
+    .prices__value small {
+      font-size: 20 !important;
+    }
+  }

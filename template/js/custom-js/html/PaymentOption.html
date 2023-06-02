@@ -19,10 +19,18 @@
         class="payment-option__details col-lg-6 col-xl-5 mt-1 mt-lg-0"
       >
         <div
-          v-if="price"
+          v-if="price && !installmentOptions"
           class="payment-option__price"
         >
           {{ formatMoney(priceWithDiscount) }}
+          <small>{{ i19atSight }}</small>
+        </div>
+
+        <div
+          v-if="price && installmentOptions"
+          class="payment-option__price"
+        >
+          {{ formatMoney(priceWithDiscount * 1.05) }}
           <small>{{ i19atSight }}</small>
         </div>
   
