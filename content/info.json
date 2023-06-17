@@ -12,7 +12,7 @@
     "text": "Fique tranquilo Compra 100% segura"
   },
   "promo": {
-    "show": true,
+    "show": false,
     "text": "Diferentes promoções ao longo do ano!"
   }
 }
