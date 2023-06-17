@@ -4,8 +4,8 @@
     "text": "Entrega rápida"
   },
   "installments": {
-    "show": false,
-    "text": "Parcele sem juros"
+    "show": true,
+    "text": "Parcele em até 12x"
   },
   "exchange": {
     "show": true,
