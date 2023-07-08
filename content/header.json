@@ -5,6 +5,9 @@
   },
   "contacts_stripe": {
     "pages": [
+      {
+        "link": "https://www.tecomshop.com.br/pages/contato"
+      }
     ],
     "phone_wpp": true,
     "socials": true
@@ -15,5 +18,7 @@
     "full_width": true
   },
   "desktop_megamenu": true,
-  "search_input": true
+  "search_input": true,
+  "alphabetical_order_submenu": true,
+  "full_width_submenu": true
 }
