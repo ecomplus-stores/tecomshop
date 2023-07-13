@@ -4,12 +4,7 @@
     "link": ""
   },
   "contacts_stripe": {
-    "pages": [
-      {
-        "link": "https://www.tecomshop.com.br/pages/contato",
-        "title": "| CONTATO |"
-      }
-    ],
+    "pages": [],
     "phone_wpp": true,
     "socials": true
   },
