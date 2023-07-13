@@ -31,7 +31,7 @@ import {
       i19onFreight: () => i18n(i19onFreight),
   
       discount () {
-        if (this.paymentGateway.discount && this.paymentGateway.discount.value > 0) {
+        if (this.paymentGateway.discount && this.paymentGateway.discount.value) {
           return this.paymentGateway.discount
         }
       },

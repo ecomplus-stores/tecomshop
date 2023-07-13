@@ -30,16 +30,16 @@
           v-if="price && installmentOptions"
           class="payment-option__price"
         >
-          {{ formatMoney(priceWithDiscount * 1.05) }}
+          {{ formatMoney(priceWithDiscount) }}
           <small>{{ i19atSight }}</small>
         </div>
   
         <span
           v-if="discount"
-          class="payment-option__discount badge badge-success"
+          class="payment-option__discount badge badge-warning"
         >
           <template v-if="discount.type === 'percentage'">
-            {{ discount.value }}%
+            {{ -1 * discount.value }}%
           </template>
           <span
             v-else
@@ -47,7 +47,7 @@
           >
             {{ formatMoney(discount.value) }}
           </span>
-          {{ i19ofDiscount }}
+          de acréscimo
           <template v-if="discount.apply_at === 'freight'">
             {{ i19onFreight }}
           </template>

@@ -14,7 +14,12 @@
       font-size: 20 !important;
     }
   }
-  // until api
-  .prices__value small {
+  .summary__amount__row .prices__value small {
     display: none !important;
   }
+  .payment__gateway--111224[data-label="Cartão de crédito"] .payment__title::after {
+    content: 'Acréscimo de 5%';
+    background-color: var(--warning);
+    padding: 5px;
+  }
+  
