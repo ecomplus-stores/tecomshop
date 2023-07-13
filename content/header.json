@@ -6,7 +6,8 @@
   "contacts_stripe": {
     "pages": [
       {
-        "link": "https://www.tecomshop.com.br/pages/contato"
+        "link": "https://www.tecomshop.com.br/pages/contato",
+        "title": "Contato"
       }
     ],
     "phone_wpp": true,
