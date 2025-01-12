@@ -1,0 +1,37 @@
+{
+  "icons": [
+    {
+      "src": "/icon_512x512.5a48e48fecbfbbec44d01fc304329d06.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/icon_384x384.7c9612af8dd62511c06d02a9924e566c.jpeg",
+      "sizes": "384x384",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/icon_192x192.56d09078c98a6795cef999e14eba5e76.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/icon_128x128.41cbed3f900fb6d079971b6b245552cb.jpeg",
+      "sizes": "128x128",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/icon_96x96.4ac29988a3d6a56348ebd88d3f9cfee1.jpeg",
+      "sizes": "96x96",
+      "type": "image/jpeg"
+    }
+  ],
+  "name": "TecomShop",
+  "short_name": "tecomshop",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "Fundada em 2018, a TecomShop é uma loja especializada no comércio de eletrônicos importados. Todos os nossos produtos são originais e lacrados. Para nós, o bom relacionamento com o cliente é o bem mais valioso, devido a isso, oferecemos um atendimento exclusivo, rápido e eficaz.",
+  "background_color": "#ffffff",
+  "theme_color": "#348ef5"
+}
